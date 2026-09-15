@@ -53,6 +53,38 @@ namespace NexaWorks.Migrations
                     b.HasKey("OSId");
 
                     b.ToTable("OperatingSystems");
+
+                    b.HasData(
+                        new
+                        {
+                            OSId = 1,
+                            Name = "Linux"
+                        },
+                        new
+                        {
+                            OSId = 2,
+                            Name = "MacOS"
+                        },
+                        new
+                        {
+                            OSId = 3,
+                            Name = "Windows"
+                        },
+                        new
+                        {
+                            OSId = 4,
+                            Name = "Android"
+                        },
+                        new
+                        {
+                            OSId = 5,
+                            Name = "iOS"
+                        },
+                        new
+                        {
+                            OSId = 6,
+                            Name = "Windows Mobile"
+                        });
                 });
 
             modelBuilder.Entity("NexaWorks.Models.Entities.Product", b =>
@@ -71,6 +103,28 @@ namespace NexaWorks.Migrations
                     b.HasKey("ProductId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductId = 1,
+                            Name = "Trader en Herbe"
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            Name = "Maître des Investissements"
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            Name = "Planificateur d’Entraînement"
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            Name = "Planificateur d’Anxiété Sociale"
+                        });
                 });
 
             modelBuilder.Entity("NexaWorks.Models.Entities.ProductVersion", b =>
@@ -94,6 +148,80 @@ namespace NexaWorks.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductVersions");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductVersionId = 1,
+                            ProductId = 1,
+                            VersionNumber = "1.0"
+                        },
+                        new
+                        {
+                            ProductVersionId = 2,
+                            ProductId = 1,
+                            VersionNumber = "1.1"
+                        },
+                        new
+                        {
+                            ProductVersionId = 3,
+                            ProductId = 1,
+                            VersionNumber = "1.2"
+                        },
+                        new
+                        {
+                            ProductVersionId = 4,
+                            ProductId = 1,
+                            VersionNumber = "1.3"
+                        },
+                        new
+                        {
+                            ProductVersionId = 5,
+                            ProductId = 2,
+                            VersionNumber = "1.0"
+                        },
+                        new
+                        {
+                            ProductVersionId = 6,
+                            ProductId = 2,
+                            VersionNumber = "2.0"
+                        },
+                        new
+                        {
+                            ProductVersionId = 7,
+                            ProductId = 2,
+                            VersionNumber = "2.1"
+                        },
+                        new
+                        {
+                            ProductVersionId = 8,
+                            ProductId = 3,
+                            VersionNumber = "1.0"
+                        },
+                        new
+                        {
+                            ProductVersionId = 9,
+                            ProductId = 3,
+                            VersionNumber = "1.1"
+                        },
+                        new
+                        {
+                            ProductVersionId = 10,
+                            ProductId = 3,
+                            VersionNumber = "2.0"
+                        },
+                        new
+                        {
+                            ProductVersionId = 11,
+                            ProductId = 4,
+                            VersionNumber = "1.0"
+                        },
+                        new
+                        {
+                            ProductVersionId = 12,
+                            ProductId = 4,
+                            VersionNumber = "1.1"
+                        });
                 });
 
             modelBuilder.Entity("NexaWorks.Models.Entities.Status", b =>
@@ -112,6 +240,18 @@ namespace NexaWorks.Migrations
                     b.HasKey("StatusId");
 
                     b.ToTable("Statuses");
+
+                    b.HasData(
+                        new
+                        {
+                            StatusId = 1,
+                            Name = "Résolu"
+                        },
+                        new
+                        {
+                            StatusId = 2,
+                            Name = "En cours"
+                        });
                 });
 
             modelBuilder.Entity("NexaWorks.Models.Entities.Ticket", b =>
