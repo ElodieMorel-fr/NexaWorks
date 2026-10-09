@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="LinqQueries\" />
+    <Folder Include="Database\" />
   </ItemGroup>
 
 </Project>
